@@ -6,21 +6,24 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-@Entity('users')
-export class UserEntity {
+@Entity('posts')
+export class PostEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  fullName: string;
+  title: string;
+
+  @Column()
+  body: string;
 
   @Column({
-    unique: true,
+    default: 0,
   })
-  email: string;
+  views: number;
 
   @Column({ nullable: true })
-  password?: string;
+  tags?: string;
 
   @CreateDateColumn({ type: 'timestamp' })
   createdAt: Date;
