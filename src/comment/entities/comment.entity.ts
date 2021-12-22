@@ -16,7 +16,7 @@ export class CommentEntity {
   id: number;
 
   @Column()
-  title: string;
+  text: string;
 
   @ManyToOne(() => UserEntity, {
     nullable: false,
