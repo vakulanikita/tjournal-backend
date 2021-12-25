@@ -19,6 +19,7 @@ import { AuthModule } from './auth/auth.module';
     TypeOrmModule.forRoot({
       type: 'postgres',
       // host: 'localhost',
+      url: 'heroku pg:psql postgresql-perpendicular-67456 --app tjournal-react',
       host: 'ec2-54-89-105-122.compute-1.amazonaws.com',
       port: 5432,
       // username: 'postgres',
