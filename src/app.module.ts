@@ -29,6 +29,9 @@ import { AuthModule } from './auth/auth.module';
       // password: process.env.DATABASE_PASSWORD, // password
       // database: 'tjournal',
       database: 'deklhofg7gji8v',
+      extra: {
+        ssl: true,
+      },
       entities: [UserEntity, PostEntity, CommentEntity],
       synchronize: true,
     }),
